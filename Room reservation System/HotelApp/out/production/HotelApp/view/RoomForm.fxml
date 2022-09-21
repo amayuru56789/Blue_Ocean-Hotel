@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="roomFormContext" prefHeight="491.0" prefWidth="785.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RoomFormController">
+   <children>
+      <AnchorPane prefHeight="491.0" prefWidth="111.0" style="-fx-background-color: #2980b9;" />
+      <JFXButton buttonType="RAISED" layoutX="626.0" layoutY="9.0" text="Admin" textFill="#726d6d">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="690.0" layoutY="8.0" onAction="#signOutOnAction" text="Sign Out" textFill="#0d65c3">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <Text fill="#0878b0" layoutX="188.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blue Ocean Hotel System">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="442.0" fitWidth="680.0" layoutX="116.0" layoutY="48.0" opacity="0.63" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/double-room.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="690.0" layoutY="446.0" onAction="#newRoomOnAction" prefHeight="31.0" prefWidth="73.0" style="-fx-background-color: blue;" text="Add Room" textFill="#e4dede" />
+      <Text layoutX="373.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rooms">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
+      <JFXButton buttonType="RAISED" layoutX="136.0" layoutY="66.0" onAction="#backToHomeOnAction" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: #7f8c8d;" text="Back" textFill="#f8f6f6" />
+      <JFXTextField fx:id="txtId" labelFloat="true" layoutX="136.0" layoutY="116.0" onAction="#moveToType" prefHeight="25.0" prefWidth="111.0" promptText="Room no" />
+      <JFXTextField fx:id="txtAvailability" labelFloat="true" layoutX="415.0" layoutY="116.0" onAction="#moveToPrice" prefHeight="25.0" prefWidth="142.0" promptText="Room Availibility" />
+      <JFXTextField fx:id="txtPrice" labelFloat="true" layoutX="588.0" layoutY="116.0" prefHeight="25.0" prefWidth="169.0" promptText="Price" />
+      <JFXButton buttonType="RAISED" layoutX="129.0" layoutY="446.0" onAction="#updateOnAction" prefHeight="31.0" prefWidth="63.0" style="-fx-background-color: #2c3e50;" text="Change" textFill="#f4f7f8" />
+      <TableView fx:id="tblRoom" blendMode="MULTIPLY" layoutX="136.0" layoutY="169.0" prefHeight="257.0" prefWidth="623.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="100.0" text="Room no" />
+          <TableColumn fx:id="colType" prefWidth="142.0" text="Room type" />
+            <TableColumn fx:id="colAvailability" minWidth="7.0" prefWidth="147.0" text="Room Availability" />
+            <TableColumn fx:id="colPrice" minWidth="0.0" prefWidth="120.0" text="Price" />
+            <TableColumn fx:id="colDelete" minWidth="0.0" prefWidth="120.0" text="Delete Rooms" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TableView>
+      <JFXTextField fx:id="txtType" labelFloat="true" layoutX="264.0" layoutY="116.0" onAction="#moveToAvaili" prefHeight="25.0" prefWidth="123.0" promptText="Room Type" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="DashBoardFormContext" prefHeight="476.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="568.0" layoutY="19.0" text="Admin" textFill="#908b8b" />
+      <JFXButton buttonType="RAISED" layoutX="635.0" layoutY="19.0" onAction="#signOutOnAction" text="Sign Out" textFill="#0e74da" />
+      <Text layoutX="161.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blue Ocean Hotel System">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#125dbf" />
+                  <Stop color="#3aa4e1" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+      <AnchorPane prefHeight="476.0" prefWidth="115.0" style="-fx-background-color: blue;" />
+      <JFXButton buttonType="RAISED" layoutX="213.0" layoutY="202.0" onAction="#openRoomsForm" prefHeight="47.0" prefWidth="101.0" style="-fx-background-color: blue;" text="View Rooms" textFill="#fffbfb">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="338.0" layoutY="202.0" onAction="#openMealFormOnAction" prefHeight="47.0" prefWidth="145.0" style="-fx-background-color: blue;" text="View Meal Packages" textFill="#fffbfb">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="507.0" layoutY="202.0" prefHeight="47.0" prefWidth="152.0" style="-fx-background-color: blue;" text="View Income Reports" textFill="#fffbfb">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
